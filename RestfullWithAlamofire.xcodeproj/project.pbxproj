@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		492528D923F154B500B3A5BC /* FeatureResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492528D823F154B500B3A5BC /* FeatureResponse.swift */; };
 		495B93EE23ED79DB00FB7EB1 /* Configs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495B93ED23ED79DB00FB7EB1 /* Configs.swift */; };
 		495B93F023ED7A0300FB7EB1 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495B93EF23ED7A0300FB7EB1 /* APIRouter.swift */; };
 		495B93F223ED7A3500FB7EB1 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495B93F123ED7A3500FB7EB1 /* BaseResponse.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		3628ED9104130CBF425137D5 /* Pods_RestfullWithAlamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestfullWithAlamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		492528D823F154B500B3A5BC /* FeatureResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureResponse.swift; sourceTree = "<group>"; };
 		495B93ED23ED79DB00FB7EB1 /* Configs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configs.swift; sourceTree = "<group>"; };
 		495B93EF23ED7A0300FB7EB1 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		495B93F123ED7A3500FB7EB1 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
@@ -54,6 +56,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		492528D423F105C600B3A5BC /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				4968AE7F23ED77A60095E294 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		492528D523F105D500B3A5BC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				495B93F523ED7A9200FB7EB1 /* User.swift */,
+				495B93F123ED7A3500FB7EB1 /* BaseResponse.swift */,
+				495B93F723ED7AAB00FB7EB1 /* Auth.swift */,
+				495B93F923ED7ACC00FB7EB1 /* LoginResponse.swift */,
+				492528D823F154B500B3A5BC /* FeatureResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		492528D623F105EE00B3A5BC /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				495B93EF23ED7A0300FB7EB1 /* APIRouter.swift */,
+				495B93ED23ED79DB00FB7EB1 /* Configs.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		492528D723F1060A00B3A5BC /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				495B93F323ED7A6C00FB7EB1 /* MGConnection.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		4968AE7323ED77A60095E294 = {
 			isa = PBXGroup;
 			children = (
@@ -75,19 +114,15 @@
 		4968AE7E23ED77A60095E294 /* RestfullWithAlamofire */ = {
 			isa = PBXGroup;
 			children = (
-				4968AE7F23ED77A60095E294 /* AppDelegate.swift */,
+				492528D423F105C600B3A5BC /* Application */,
 				4968AE8123ED77A60095E294 /* ViewController.swift */,
 				4968AE8323ED77A60095E294 /* Main.storyboard */,
 				4968AE8623ED77A70095E294 /* Assets.xcassets */,
 				4968AE8823ED77A70095E294 /* LaunchScreen.storyboard */,
 				4968AE8B23ED77A70095E294 /* Info.plist */,
-				495B93ED23ED79DB00FB7EB1 /* Configs.swift */,
-				495B93EF23ED7A0300FB7EB1 /* APIRouter.swift */,
-				495B93F123ED7A3500FB7EB1 /* BaseResponse.swift */,
-				495B93F323ED7A6C00FB7EB1 /* MGConnection.swift */,
-				495B93F523ED7A9200FB7EB1 /* User.swift */,
-				495B93F723ED7AAB00FB7EB1 /* Auth.swift */,
-				495B93F923ED7ACC00FB7EB1 /* LoginResponse.swift */,
+				492528D723F1060A00B3A5BC /* Manager */,
+				492528D523F105D500B3A5BC /* Model */,
+				492528D623F105EE00B3A5BC /* Networking */,
 			);
 			path = RestfullWithAlamofire;
 			sourceTree = "<group>";
@@ -233,6 +268,7 @@
 				495B93EE23ED79DB00FB7EB1 /* Configs.swift in Sources */,
 				495B93F623ED7A9200FB7EB1 /* User.swift in Sources */,
 				495B93F823ED7AAB00FB7EB1 /* Auth.swift in Sources */,
+				492528D923F154B500B3A5BC /* FeatureResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +417,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RestfullWithAlamofire/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -399,6 +436,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RestfullWithAlamofire/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

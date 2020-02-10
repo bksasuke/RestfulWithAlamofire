@@ -13,14 +13,20 @@ enum APIRouter: URLRequestConvertible {
     // =========== Begin define api ===========
     case login(email: String, password: String)
     case changePassword(pass: String, newPass: String, confirmNewPass: String)
+    case feature
+    case fixURL
     
     // =========== End define api ===========
     
     // MARK: - HTTPMethod
     private var method: HTTPMethod {
         switch self {
-        case .login, .changePassword:
+        case .login,
+             .changePassword,
+             .feature:
             return .post
+        default:
+            return .get
         }
     }
     
@@ -31,6 +37,10 @@ enum APIRouter: URLRequestConvertible {
             return "v1/user/login"
         case .changePassword:
             return "v1/user/change_password"
+        case .feature:
+            return "feature" // urlString = "http://api.letsbuildthatapp.com/appstore/featured"
+        default:
+            return ""
         }
     }
     
@@ -42,6 +52,8 @@ enum APIRouter: URLRequestConvertible {
             break
         case .changePassword:
             headers["Authorization"] = getAuthorizationHeader()
+            break
+        default:
             break
         }
         
@@ -62,6 +74,10 @@ enum APIRouter: URLRequestConvertible {
                 "new_password": newPass,
                 "new_password_confirmation": confirmNewPass
             ]
+        case .feature:
+            break
+        default:
+            return nil
         }
     }
 

@@ -1,5 +1,5 @@
 //
-//  User.swift
+//  LoginResponse.swift
 //  RestfullWithAlamofire
 //
 //  Created by TuanTQ16.local on 2/7/20.
@@ -35,5 +35,18 @@ class User:Mappable {
         createdAt <- map["created_at"]
         updatedAt <- map["updated_at"]
         phone <- map["phone"]
+    }
+}
+
+class LoginResponse: Mappable {
+    var user: User?
+    var auth: Auth?
+    
+    required init?(map: Map) {
+    }
+    
+    func mapping(map: Map) {
+        user <- map["user"]
+        auth <- map["auth"]
     }
 }

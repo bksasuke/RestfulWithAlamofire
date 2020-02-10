@@ -14,10 +14,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        MGConnection.request(APIRouter.login(email: "tiendang@gmail.com", password: "123456789"), LoginResponse.self,
+        MGConnection.request(APIRouter.feature, LoginResponse.self,
                              completion: {(result, err) in
             guard err == nil else {
-                print("False with code: \(err?.mErrorCode) and message: \(err?.mErrorMessage)")
+                print("False with code: \(err?.mErrorCode ?? 0) and message: \(err?.mErrorMessage ?? "Some error")")
                 return
             }
                     
