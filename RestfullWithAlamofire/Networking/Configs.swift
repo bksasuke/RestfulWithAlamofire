@@ -9,7 +9,7 @@
 import Foundation
 
 struct Production {
-    static let BASE_URL: String = "http://api.letsbuildthatapp.com/appstore/"//"https://your_base_url.com/api/" // Thay thế bằng Base url mà bạn sử dụng ở đây
+    static let BASE_URL: String = "https://reqres.in/api/"//"http://api.letsbuildthatapp.com/appstore/"//"https://reqres.in/api/users?page=1" //
 }
 
 enum NetworkErrorType {

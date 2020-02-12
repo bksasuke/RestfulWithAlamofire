@@ -15,6 +15,7 @@ enum APIRouter: URLRequestConvertible {
     case changePassword(pass: String, newPass: String, confirmNewPass: String)
     case feature
     case fixURL
+    case user
     
     // =========== End define api ===========
     
@@ -39,6 +40,8 @@ enum APIRouter: URLRequestConvertible {
             return "v1/user/change_password"
         case .feature:
             return "feature" // urlString = "http://api.letsbuildthatapp.com/appstore/featured"
+        case .user:
+            return "users"
         default:
             return ""
         }
@@ -75,7 +78,7 @@ enum APIRouter: URLRequestConvertible {
                 "new_password_confirmation": confirmNewPass
             ]
         case .feature:
-            break
+            return nil
         default:
             return nil
         }

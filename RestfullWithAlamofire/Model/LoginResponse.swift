@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-class User:Mappable {
+class User: Mappable {
     var id: Int?
     var roleId: Int?
     var fullname: String?
