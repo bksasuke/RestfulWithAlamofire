@@ -16,6 +16,7 @@ class BaseResponse<T: Mappable>: Mappable {
     var data: T?
     
     required init?(map: Map) {
+        
     }
     
     func mapping(map: Map) {
@@ -23,10 +24,17 @@ class BaseResponse<T: Mappable>: Mappable {
         code <- map["code"]
         message <- map["message"]
         data <- map["data"]
+        if let token = map.JSON["token"] {
+            data <- map["token"]
+        }
     }
     
     func isSuccessCode() -> Bool? {
         return code == 200
+    }
+    
+    func hasData() -> Bool {
+        return data != nil
     }
 }
 

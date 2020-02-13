@@ -26,11 +26,11 @@ class NetworkManager {
         Alamofire.request(apiRouter).responseObject {(response: DataResponse<BaseResponse<T>>) in
             switch response.result {
             case .success:
+                let err: BaseResponseError = BaseResponseError.init(NetworkErrorType.API_ERROR, (response.result.value?.code) ?? 0, (response.result.value?.message) ?? "error String")
                 if response.response?.statusCode == 200 {
                     if (response.result.value?.isSuccessCode())! {
                         completion((response.result.value?.data)!, nil)
                     } else {
-                        let err: BaseResponseError = BaseResponseError.init(NetworkErrorType.API_ERROR, (response.result.value?.code) ?? 0, (response.result.value?.message) ?? "error String")
                         completion(nil, err)
                     }
                 } else {

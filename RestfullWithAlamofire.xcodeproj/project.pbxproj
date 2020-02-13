@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		490BBB4D23F558050076654D /* StartupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490BBB4C23F558050076654D /* StartupViewController.swift */; };
 		490E8A5323F3F64400C9D11A /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 490E8A5223F3F64400C9D11A /* LoginViewController.xib */; };
 		490E8A5523F3F8F000C9D11A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490E8A5423F3F8F000C9D11A /* LoginViewController.swift */; };
 		492528D923F154B500B3A5BC /* FeatureResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492528D823F154B500B3A5BC /* FeatureResponse.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		3628ED9104130CBF425137D5 /* Pods_RestfullWithAlamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestfullWithAlamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		490BBB4C23F558050076654D /* StartupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartupViewController.swift; sourceTree = "<group>"; };
 		490E8A5223F3F64400C9D11A /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		490E8A5423F3F8F000C9D11A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		492528D823F154B500B3A5BC /* FeatureResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureResponse.swift; sourceTree = "<group>"; };
@@ -58,6 +60,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		490BBB4B23F557DE0076654D /* Startup */ = {
+			isa = PBXGroup;
+			children = (
+				490BBB4C23F558050076654D /* StartupViewController.swift */,
+			);
+			path = Startup;
+			sourceTree = "<group>";
+		};
 		490E8A5123F3EF8C00C9D11A /* LoginViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -67,12 +77,13 @@
 			path = LoginViewController;
 			sourceTree = "<group>";
 		};
-		492528D423F105C600B3A5BC /* Application */ = {
+		492528D423F105C600B3A5BC /* ProjectFolder */ = {
 			isa = PBXGroup;
 			children = (
 				4968AE7F23ED77A60095E294 /* AppDelegate.swift */,
+				490BBB4B23F557DE0076654D /* Startup */,
 			);
-			path = Application;
+			path = ProjectFolder;
 			sourceTree = "<group>";
 		};
 		492528D523F105D500B3A5BC /* Model */ = {
@@ -125,7 +136,7 @@
 		4968AE7E23ED77A60095E294 /* RestfullWithAlamofire */ = {
 			isa = PBXGroup;
 			children = (
-				492528D423F105C600B3A5BC /* Application */,
+				492528D423F105C600B3A5BC /* ProjectFolder */,
 				4968AE8323ED77A60095E294 /* Main.storyboard */,
 				4968AE8623ED77A70095E294 /* Assets.xcassets */,
 				4968AE8823ED77A70095E294 /* LaunchScreen.storyboard */,
@@ -274,6 +285,7 @@
 				495B93F223ED7A3500FB7EB1 /* BaseResponse.swift in Sources */,
 				495B93FA23ED7ACC00FB7EB1 /* LoginResponse.swift in Sources */,
 				495B93F023ED7A0300FB7EB1 /* APIRouter.swift in Sources */,
+				490BBB4D23F558050076654D /* StartupViewController.swift in Sources */,
 				495B93F423ED7A6C00FB7EB1 /* NetworkManager.swift in Sources */,
 				4968AE8023ED77A60095E294 /* AppDelegate.swift in Sources */,
 				495B93EE23ED79DB00FB7EB1 /* Configs.swift in Sources */,

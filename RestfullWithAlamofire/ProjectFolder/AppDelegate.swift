@@ -20,6 +20,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let initialViewController = LoginViewController()
         self.window?.rootViewController = initialViewController
         self.window?.makeKeyAndVisible()
+        
+        let lauchBlock = {
+             // Do sth in lauching successful
+            
+        }
+        
+        
+        
         return true
     }
 

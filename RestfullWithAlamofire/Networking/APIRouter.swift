@@ -16,6 +16,7 @@ enum APIRouter: URLRequestConvertible {
     case feature
     case fixURL
     case user
+    case createUser(name: String, salary: Int, age: Int)
     
     // =========== End define api ===========
     
@@ -24,7 +25,8 @@ enum APIRouter: URLRequestConvertible {
         switch self {
         case .login,
              .changePassword,
-             .feature:
+             .feature,
+             .createUser :
             return .post
         default:
             return .get
@@ -35,13 +37,15 @@ enum APIRouter: URLRequestConvertible {
     private var path: String {
         switch self {
         case .login:
-            return "v1/user/login"
+            return "login"
         case .changePassword:
-            return "v1/user/change_password"
+            return "change_password"
         case .feature:
             return "feature" // urlString = "http://api.letsbuildthatapp.com/appstore/featured"
         case .user:
             return "users"
+        case .createUser:
+            return "create"
         default:
             return ""
         }
@@ -79,6 +83,11 @@ enum APIRouter: URLRequestConvertible {
             ]
         case .feature:
             return nil
+        case .createUser(let name, let salary, let age):
+            return ["user": name,
+                    "salary": salary,
+                    "age": age
+                ]
         default:
             return nil
         }
@@ -93,6 +102,7 @@ enum APIRouter: URLRequestConvertible {
         
         // setting method
         urlRequest.httpMethod = method.rawValue
+//        urlRequest.
         
         // setting header
         for (key, value) in headers {
