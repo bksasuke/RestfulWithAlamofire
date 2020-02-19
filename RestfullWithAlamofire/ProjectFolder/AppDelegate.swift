@@ -26,6 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
         }
         
+        // Check Appmode and navigate to suitable screen
+        
         
         
         return true

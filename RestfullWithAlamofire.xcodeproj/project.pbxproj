@@ -11,6 +11,10 @@
 		490E8A5323F3F64400C9D11A /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 490E8A5223F3F64400C9D11A /* LoginViewController.xib */; };
 		490E8A5523F3F8F000C9D11A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490E8A5423F3F8F000C9D11A /* LoginViewController.swift */; };
 		492528D923F154B500B3A5BC /* FeatureResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492528D823F154B500B3A5BC /* FeatureResponse.swift */; };
+		49474F9023FD2F7400C6E767 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49474F8F23FD2F7400C6E767 /* AppSettings.swift */; };
+		49474F9223FD36DE00C6E767 /* AppModeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49474F9123FD36DE00C6E767 /* AppModeController.swift */; };
+		49474F9723FD397100C6E767 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49474F9623FD397100C6E767 /* Default-568h@2x.png */; };
+		49474F9923FD437D00C6E767 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49474F9823FD437D00C6E767 /* Info.plist */; };
 		495B93EE23ED79DB00FB7EB1 /* Configs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495B93ED23ED79DB00FB7EB1 /* Configs.swift */; };
 		495B93F023ED7A0300FB7EB1 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495B93EF23ED7A0300FB7EB1 /* APIRouter.swift */; };
 		495B93F223ED7A3500FB7EB1 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495B93F123ED7A3500FB7EB1 /* BaseResponse.swift */; };
@@ -31,6 +35,10 @@
 		490E8A5223F3F64400C9D11A /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		490E8A5423F3F8F000C9D11A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		492528D823F154B500B3A5BC /* FeatureResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureResponse.swift; sourceTree = "<group>"; };
+		49474F8F23FD2F7400C6E767 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		49474F9123FD36DE00C6E767 /* AppModeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModeController.swift; sourceTree = "<group>"; };
+		49474F9623FD397100C6E767 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		49474F9823FD437D00C6E767 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		495B93ED23ED79DB00FB7EB1 /* Configs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configs.swift; sourceTree = "<group>"; };
 		495B93EF23ED7A0300FB7EB1 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		495B93F123ED7A3500FB7EB1 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
@@ -43,7 +51,6 @@
 		4968AE8423ED77A60095E294 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4968AE8623ED77A70095E294 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4968AE8923ED77A70095E294 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		4968AE8B23ED77A70095E294 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F48114851C6F00659B956DB /* Pods-RestfullWithAlamofire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestfullWithAlamofire.release.xcconfig"; path = "Target Support Files/Pods-RestfullWithAlamofire/Pods-RestfullWithAlamofire.release.xcconfig"; sourceTree = "<group>"; };
 		E18158BF44496E4301379493 /* Pods-RestfullWithAlamofire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestfullWithAlamofire.debug.xcconfig"; path = "Target Support Files/Pods-RestfullWithAlamofire/Pods-RestfullWithAlamofire.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,9 +122,29 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
+		49474F8E23FD2F5C00C6E767 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				49474F8F23FD2F7400C6E767 /* AppSettings.swift */,
+				49474F9123FD36DE00C6E767 /* AppModeController.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		49474F9323FD375A00C6E767 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4968AE8623ED77A70095E294 /* Assets.xcassets */,
+				4968AE8823ED77A70095E294 /* LaunchScreen.storyboard */,
+				49474F9823FD437D00C6E767 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		4968AE7323ED77A60095E294 = {
 			isa = PBXGroup;
 			children = (
+				49474F9623FD397100C6E767 /* Default-568h@2x.png */,
 				4968AE7E23ED77A60095E294 /* RestfullWithAlamofire */,
 				4968AE7D23ED77A60095E294 /* Products */,
 				536D4A7AAC5C56069A465FA9 /* Pods */,
@@ -138,13 +165,12 @@
 			children = (
 				492528D423F105C600B3A5BC /* ProjectFolder */,
 				4968AE8323ED77A60095E294 /* Main.storyboard */,
-				4968AE8623ED77A70095E294 /* Assets.xcassets */,
-				4968AE8823ED77A70095E294 /* LaunchScreen.storyboard */,
-				4968AE8B23ED77A70095E294 /* Info.plist */,
+				49474F8E23FD2F5C00C6E767 /* Services */,
 				490E8A5123F3EF8C00C9D11A /* LoginViewController */,
 				492528D723F1060A00B3A5BC /* Manager */,
 				492528D523F105D500B3A5BC /* Model */,
 				492528D623F105EE00B3A5BC /* Networking */,
+				49474F9323FD375A00C6E767 /* Supporting Files */,
 			);
 			path = RestfullWithAlamofire;
 			sourceTree = "<group>";
@@ -228,8 +254,10 @@
 			files = (
 				490E8A5323F3F64400C9D11A /* LoginViewController.xib in Resources */,
 				4968AE8A23ED77A70095E294 /* LaunchScreen.storyboard in Resources */,
+				49474F9923FD437D00C6E767 /* Info.plist in Resources */,
 				4968AE8723ED77A70095E294 /* Assets.xcassets in Resources */,
 				4968AE8523ED77A60095E294 /* Main.storyboard in Resources */,
+				49474F9723FD397100C6E767 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,7 +311,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				495B93F223ED7A3500FB7EB1 /* BaseResponse.swift in Sources */,
+				49474F9223FD36DE00C6E767 /* AppModeController.swift in Sources */,
 				495B93FA23ED7ACC00FB7EB1 /* LoginResponse.swift in Sources */,
+				49474F9023FD2F7400C6E767 /* AppSettings.swift in Sources */,
 				495B93F023ED7A0300FB7EB1 /* APIRouter.swift in Sources */,
 				490BBB4D23F558050076654D /* StartupViewController.swift in Sources */,
 				495B93F423ED7A6C00FB7EB1 /* NetworkManager.swift in Sources */,
@@ -376,6 +406,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -430,6 +461,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -440,7 +472,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = RestfullWithAlamofire/Info.plist;
+				INFOPLIST_FILE = "/Users/tuantq16.local/Project/Learning 2/RestfulWithAlamofire/RestfullWithAlamofire/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -448,7 +480,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Fsoft.RestfullWithAlamofire;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -459,7 +491,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = RestfullWithAlamofire/Info.plist;
+				INFOPLIST_FILE = "/Users/tuantq16.local/Project/Learning 2/RestfulWithAlamofire/RestfullWithAlamofire/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -467,7 +499,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Fsoft.RestfullWithAlamofire;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
